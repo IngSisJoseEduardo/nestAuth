@@ -12,6 +12,7 @@ export class AuthService {
   async validateUser(username: string, pass: string): Promise<any> {
     // userService sera el encargado de verificar al usuario en la base de datos
     const user = await this.usersService.findOne(username);
+    // para fines de estudio aqui solo compara el password de manera SVGFEDisplacementMapElement, se recomienda utilizar bcrypt
     if (user && user.password === pass) {
       const { password, ...result } = user; // extrae el atributo password y los atributos restantes los guarda en "result"
       return result;

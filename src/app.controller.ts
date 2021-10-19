@@ -15,7 +15,7 @@ export class AppController {
     private readonly authService: AuthService,
   ) {}
 
-  @Public() // el decorador public permite exponer el endpoint, sin necesidad de proporcionarle un JWT
+  // @Public() // el decorador public permite exponer el endpoint, sin necesidad de proporcionarle un JWT
   @Get()
   getHello(): string {
     return this.appService.getHello();
